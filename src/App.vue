@@ -2,8 +2,10 @@
   <div id="app">
      
     <HeaderComp
+     
      @emitsearchTextHeader="searchMovie" />
     <MainComp 
+     :arraySeriesApp="arraySeries"
      :arrayResultApp="arrayResults"
      />
   </div>
@@ -33,7 +35,11 @@ export default {
       
       searchQueryUrl:"",
 
-      arrayResults : [],
+      searchUrlSeries:"", 
+
+      arrayResults:[],
+
+      arraySeries:[],
 
 
 
@@ -57,6 +63,18 @@ export default {
                    this.arrayResults = resp.data.results
                   
                 })
+
+      this.searchUrlSeries = 'https://api.themoviedb.org/3/search/tv?api_key=1b28750e9e57b2ad4b30e1692e9b30f0&language=en-US&page=1&include_adult=false&query='
+      + this.searchTextApp;
+      
+      axios.get(this.searchUrlSeries).then((respo) => {
+
+        this.arraySeries = respo.data.results
+        
+      })          
+
+
+
     }
 
    

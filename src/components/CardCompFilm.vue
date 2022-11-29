@@ -1,54 +1,62 @@
 <template>
-    <div class="cards">
-        <div class='card-img'>
-          <img :src="`http://image.tmdb.org/t/p/w342/${objectResultFilmList.poster_path}`" alt="">  
+        <div class="card-movie">
+            <div class='card-img'>
+                <img :src="`http://image.tmdb.org/t/p/w342/${objectResultFilmList.poster_path}`" alt="">
+            </div>
+            <div class="card-content">
+                <div>{{objectResultFilmList.title}}</div>
+                <div>{{objectResultFilmList.original_title}}</div>
+                <!-- <div>{{objectResultFilmList.original_language}}</div> -->
+                <country-flag :country='objectResultFilmList.original_language' size=' big ' />
+                <div>{{objectResultFilmList.vote_average}}</div>
+            </div>
         </div>
-        
-        <div class="card-content">
-          <div>{{objectResultFilmList.title}}</div>
-          <div>{{objectResultFilmList.original_title}}</div>
-          <!-- <div>{{objectResultFilmList.original_language}}</div> -->
-          <country-flag  :country=objectResultFilmList.original_language size =' big '/>
-          <div>{{objectResultFilmList.vote_average}}</div>   
-        </div>
-
-    </div>
 </template>
 
 <script>
+import CountryFlag from 'vue-country-flag'
+
 export default {
     name: 'CardCompFilm',
-    components:{
-    //CountryFlag
+    components: {
+        CountryFlag
     },
     props: {
-        objectResultFilmList: Object
+        objectResultFilmList: Object,
+        
     }
 }
 </script>
 
 <style lang="scss" scoped>
-
-
-.cards{
+.card-movie {
     width: 342px;
+    
 }
 
-.cards:hover .card-img {
-   display:none;
-
+.card-img{
+    //  transition: all 1s linear;
 }
 
-.card-content{
+.card-movie:hover .card-img {
+     
+    //  transform: rotateY(180deg);
+     display: none;
+     
+    
+}
+
+.card-content {
     width: 342px;
-    display:none;
+    
+    display: none;
+    
 }
 
-.cards:hover .card-content{
- width: 342px;  
- display:block;
+.card-movie:hover .card-content {
+    width: 342px;
+    display: block;
+    
+    
 }
-
-
-
 </style>

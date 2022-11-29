@@ -4,7 +4,7 @@
   
 
   <FilmList :arrayResultMain="arrayResultApp" />
-  <SeriesList />
+  <SeriesList :arraySeriesMain="arraySeriesApp" />
 </div>
 </template>
 
@@ -21,6 +21,7 @@ export default {
     SeriesList
   },
   props: {
+    arraySeriesApp:Array,
     arrayResultApp:Array
   }
 }
