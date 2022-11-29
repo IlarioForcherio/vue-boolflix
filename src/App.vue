@@ -1,8 +1,11 @@
 <template>
   <div id="app">
      
-    <HeaderComp @emitsearchTextHeader="searchMovie"  />
-    <MainComp  />
+    <HeaderComp
+     @emitsearchTextHeader="searchMovie" />
+    <MainComp 
+     :arrayResultApp="arrayResults"
+     />
   </div>
 </template>
 
@@ -26,15 +29,16 @@ export default {
   data(){
     return{
 
-      searchTextApp:''
+      searchTextApp:"",
+      
+      searchQueryUrl:"",
+
+      arrayResults : [],
 
     }
   },
   mounted(){
-   axios.get("https://api.themoviedb.org/3/search/movie?api_key=1b28750e9e57b2ad4b30e1692e9b30f0&language=en-US&page=1&include_adult=false&query=all")
-                .then((resp) => {
-                   console.log(resp.data)
-                })
+  
 
 
   },
@@ -42,6 +46,15 @@ export default {
 
     searchMovie(searchTextHeader){
      this.searchTextApp = searchTextHeader
+      
+     this.searchQueryUrl = 'https://api.themoviedb.org/3/search/movie?api_key=1b28750e9e57b2ad4b30e1692e9b30f0&language=en-US&page=1&include_adult=false&query=' + 
+     this.searchTextApp;
+
+      axios.get(this.searchQueryUrl)
+                .then((resp) => {
+                   this.arrayResults = resp.data.results
+                  
+                })
     }
 
   }

@@ -1,10 +1,10 @@
 <template>
 <div>
-main
+
+  <div v-for='(elem, index) in arrayResultApp' :key="index" >{{elem.title}}</div>
+
   <FilmList />
   <SeriesList />
-
-  
 </div>
 </template>
 
@@ -19,12 +19,10 @@ export default {
    components:{
     FilmList,
     SeriesList
-
-
+  },
+  props: {
+    arrayResultApp:Array
   }
-  // props: {
-    
-  // }
 }
 </script>
 

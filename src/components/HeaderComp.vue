@@ -12,7 +12,7 @@
     export default {
         name:"HeaderComp",
         props:{
-
+         
         },
         data(){
             return{
