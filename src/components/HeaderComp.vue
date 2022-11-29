@@ -1,14 +1,25 @@
 <template>
-   <div class="header d-flex justify-content-between">
-    <div><img src="../assets/Netflix-Logo.png" alt=""></div>
-    <div>search</div>
+   <div class="header d-flex justify-content-between align-items-center">
+    <img src="../assets/Netflix-Logo.png" alt="">
+    <div class="ms-3">
+        <input v-model="searchTextHeader" @keyup="$emit('emitsearchTextHeader', searchTextHeader  )" type="text">
+    </div>
 
     </div>
 </template>
 
 <script>
     export default {
-        name:"HeaderComp"
+        name:"HeaderComp",
+        props:{
+
+        },
+        data(){
+            return{
+            searchTextHeader:''  
+            }
+           
+        }
     }
 </script>
 
