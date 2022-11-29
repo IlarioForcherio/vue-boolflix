@@ -1,7 +1,7 @@
 <template>
     <div>
-    film
-    <CardComp/> 
+        
+      <CardComp :arrayResultFilmList="arrayResultMain" /> 
     </div>
 </template>
 
@@ -13,7 +13,11 @@ import CardComp from '../components/CardComp.vue'
         name:'FilmList',
         components:{
         CardComp
+        },
+        props:{
+         arrayResultMain: Array   
         }
+        
     }
 </script>
 
