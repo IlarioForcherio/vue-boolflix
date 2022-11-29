@@ -1,12 +1,27 @@
 <template>
-<div class="">
-  ciao
+<div>
+main
+  <FilmList />
+  <SeriesList />
+
+  
 </div>
 </template>
 
 <script>
+
+import FilmList from '../components/FilmList.vue'
+import SeriesList from '../components/SeriesList.vue'
+
 export default {
-  name: 'MainComp'
+   name: 'MainComp',
+  
+   components:{
+    FilmList,
+    SeriesList
+
+
+  }
   // props: {
     
   // }

@@ -15,7 +15,9 @@
 <style lang="scss" scoped>
 
 .header{
-    
+   img{
+    width:10%;
+   } 
 }
 
 </style>
