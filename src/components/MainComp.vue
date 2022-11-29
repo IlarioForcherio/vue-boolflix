@@ -1,9 +1,9 @@
 <template>
 <div>
 
-  <div v-for='(elem, index) in arrayResultApp' :key="index" >{{elem.title}}</div>
+  
 
-  <FilmList />
+  <FilmList :arrayResultMain="arrayResultApp" />
   <SeriesList />
 </div>
 </template>

@@ -1,12 +1,19 @@
 <template>
     <div>
 series
+
+<CardCompSeries/>
     </div>
 </template>
 
 <script>
+
+import CardCompSeries from './CardCompSeries.vue'
     export default {
-        name:'SeriesList'
+        name:'SeriesList',
+        components:{
+        CardCompSeries
+        }
     }
 </script>
 

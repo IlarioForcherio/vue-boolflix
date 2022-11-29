@@ -4,6 +4,7 @@
     <div class="ms-3">
         <input v-model="searchTextHeader" @keyup="$emit('emitsearchTextHeader', searchTextHeader  )" type="text">
     </div>
+   
 
     </div>
 </template>

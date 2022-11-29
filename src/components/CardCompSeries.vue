@@ -1,12 +1,12 @@
 <template>
     <div>
-cardcomp
+cardcompseries
     </div>
 </template>
 
 <script>
     export default {
-        name:'CardComp'
+        name:'CardCompSeries'
     }
 </script>
 
