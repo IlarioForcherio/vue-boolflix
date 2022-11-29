@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div class="card-comp d-flex overflow-auto" >
-        <CardCompFilm v-for='(elem, index) in arrayResultMain' :key="index"
+        <div class="d-flex overflow-auto">
+        <CardCompFilm class="card-comp" v-for='(elem, index) in arrayResultMain' :key="index"
          :objectResultFilmList="elem" />    
         </div>
     </div>
