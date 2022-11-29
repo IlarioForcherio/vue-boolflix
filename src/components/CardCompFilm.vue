@@ -1,6 +1,6 @@
 <template>
     <div class="cards">
-        <div class='card-img' >
+        <div class='card-img'>
           <img :src="`http://image.tmdb.org/t/p/w342/${objectResultFilmList.poster_path}`" alt="">  
         </div>
         
@@ -39,9 +39,14 @@ export default {
 
 }
 
+.card-content{
+    width: 342px;
+    display:none;
+}
+
 .cards:hover .card-content{
  width: 342px;  
-display:block;
+ display:block;
 }
 
 

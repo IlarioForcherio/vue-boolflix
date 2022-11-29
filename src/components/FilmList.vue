@@ -1,6 +1,7 @@
 <template>
     <div>
-        <div class="d-flex overflow-auto">
+        <h3>Films:</h3>
+        <div class="d-flex overflow-auto text-center">
         <CardCompFilm class="card-comp" v-for='(elem, index) in arrayResultMain' :key="index"
          :objectResultFilmList="elem" />    
         </div>

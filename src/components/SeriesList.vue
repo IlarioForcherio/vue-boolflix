@@ -1,6 +1,6 @@
 <template>
     <div>
-series
+        <h3>Tv-Series:</h3>
 
 <CardCompSeries/>
     </div>
