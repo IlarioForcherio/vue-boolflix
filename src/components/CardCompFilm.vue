@@ -4,15 +4,15 @@
                 <img :src="`http://image.tmdb.org/t/p/w342/${objectResultFilmList.backdrop_path}`" alt="">
             </div>
             <div class="card-content">
-                <div>{{objectResultFilmList.title}}</div>
+                <!-- <div>{{objectResultFilmList.title}}</div> -->
                 <div>{{objectResultFilmList.original_title}}</div>
                 <div v-if="objectResultFilmList.original_language ==  'it' " > 🇮🇹 </div>
                 <div v-else-if="objectResultFilmList.original_language ==  'en'" > 🇺🇸 </div>
                 <div v-else > 🇹🇲 </div>
-                <!-- <country-flag :country='objectResultFilmList.original_language' /> -->
+              
                 <div class="d-inline" v-for="n in fullStars" :key="n" >&#9733;</div>
+                <div class="d-inline" v-if="halfStar == true ">mezza</div>
                 <div class="d-inline" v-for="n in emptyStars" :key="n" >&#9734;</div>
-                <div></div>
             </div>
         </div>
 </template>
@@ -32,12 +32,12 @@ export default {
     data(){
     return{
      
-     roundedVote:0,
+     halfVote:0,
      emptyStars:0,
      fullStars:0,
+     halfStar: true,
      
-     fullStarsArray:[],
-     emtystarsArray:[]
+     
 
     }
    },
@@ -48,10 +48,19 @@ export default {
    },
    methods: {
     starsRating(){
-       this.fullStars = Math.round(this.objectResultFilmList.vote_average / 2)
-       //console.log(this.fullStars)
-      
-       console.log(this.fullStarsArray)
+       
+       this.halfVote =  this.objectResultFilmList.vote_average / 2
+       //this.fullStars = Math.floor(this.fullStars)
+       console.log(this.halfVote)
+       
+       
+       if(this.halfVote % 2 == 0){
+        this.halfStar = false
+       }else{
+        this.halfStar = true
+       }
+       
+       this.fullStars = this.halfVote 
        this.emptyStars = 5 - this.fullStars
      
      
@@ -71,20 +80,25 @@ export default {
 .card-movie {
     padding-top:30px;
     width: 342px;
-    transition: all 0.1s linear;
-    height:350px;  
+    transition: all 0.2s linear;
+    height:350px;
+   
+    border-radius:10px;
+     
 }
-
 
 .card-movie:hover{
-  scale: 1.1 ;
+  scale: 1.3 ;
 }
+
 
 
 .card-content {
-    width: 342px;
+     width: 342px;
      display: none;
      bottom:200px;
+     
+    
     
 }
 

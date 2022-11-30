@@ -34,6 +34,7 @@
     width: 342px;
     transition: all 0.11s linear;
     height:350px;
+   
      
 }
 

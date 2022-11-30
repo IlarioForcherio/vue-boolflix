@@ -30,6 +30,7 @@ import CardCompFilm from './CardCompFilm.vue'
 .card-container{
     overflow-x:auto;
     overflow-y:hidden;
+    
 
 }
 

@@ -3,7 +3,7 @@
    <div class="header d-flex justify-content-between align-items-center">
     <img src="../assets/Netflix-Logo.png" alt="">
     <div class="ms-3">
-        <input v-model="searchTextHeader" @keyup="$emit('emitsearchTextHeader', searchTextHeader  )" type="text">
+        <input v-model="searchTextHeader" @keyup.enter="$emit('emitsearchTextHeader', searchTextHeader  )" type="text">
        
     </div>
    
