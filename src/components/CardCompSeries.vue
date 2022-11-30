@@ -2,7 +2,7 @@
     <div>
         <div class="card-series">
             <div class='card-series-img'>
-                <img :src="`http://image.tmdb.org/t/p/w342/${objectResultSeriesList.poster_path}`" alt="">
+                <img :src="`http://image.tmdb.org/t/p/w342/${objectResultSeriesList.backdrop_path}`" alt="">
             </div>
             <div class="card-series-content">
                 <div>{{objectResultSeriesList.name}}</div>
@@ -28,16 +28,21 @@
 <style lang="scss" scoped>
 
 .card-series {
+    padding-top:30px;
     width: 342px;
+    transition: all 0.11s linear;
+    height:350px;
+     
 }
 
-.card-series:hover .card-series-img {
-    display: none;
+.card-series:hover {
+    scale: 1.1 ;
+    
 }
 
 .card-series-content {
-    width: 342px;
-    display: none;
+     width: 342px;
+     display: none;  
 }
 
 .card-series:hover .card-series-content {

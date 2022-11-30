@@ -1,7 +1,7 @@
 <template>
     <div>
-        <h3>Tv-Series:</h3>
-        <div class="d-flex overflow-auto text-center">
+        <h3 class="mt-5">Tv-Series:</h3>
+        <div class="card-cnt-series d-flex  text-center ">
              <CardCompSeries class="" v-for='(element, index) in arraySeriesMain' :key="index"
              :objectResultSeriesList="element" /> 
         </div>
@@ -25,5 +25,22 @@
 </script>
 
 <style lang="scss" scoped>
+
+.card-cnt-series{
+     overflow-x:auto;
+    overflow-y:hidden;
+}
+
+.card-cnt-series::-webkit-scrollbar{
+   background-color:black;
+  
+}
+
+.card-cnt-series::-webkit-scrollbar-thumb {
+background-color:rgb(62, 59, 59);
+width:1px;
+border-radius: 10px;
+
+}
 
 </style>

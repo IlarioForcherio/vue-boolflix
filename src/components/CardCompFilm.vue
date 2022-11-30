@@ -1,13 +1,13 @@
 <template>
         <div class="card-movie">
             <div class='card-img'>
-                <img :src="`http://image.tmdb.org/t/p/w342/${objectResultFilmList.poster_path}`" alt="">
+                <img :src="`http://image.tmdb.org/t/p/w342/${objectResultFilmList.backdrop_path}`" alt="">
             </div>
             <div class="card-content">
                 <div>{{objectResultFilmList.title}}</div>
                 <div>{{objectResultFilmList.original_title}}</div>
                 <!-- <div>{{objectResultFilmList.original_language}}</div> -->
-                <country-flag :country='objectResultFilmList.original_language' size=' big ' />
+                <country-flag :country='objectResultFilmList.original_language' />
                 <div>{{objectResultFilmList.vote_average}}</div>
             </div>
         </div>
@@ -29,29 +29,30 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+
+
 .card-movie {
+     
+    padding-top:30px;
     width: 342px;
-    
+    transition: all 0.1s linear;
+    height:350px;  
 }
 
-.card-img{
-    //  transition: all 1s linear;
+
+.card-movie:hover{
+  scale: 1.1 ;
 }
 
-.card-movie:hover .card-img {
-     
-    //  transform: rotateY(180deg);
-     display: none;
-     
-    
-}
 
 .card-content {
     width: 342px;
-    
-    display: none;
+     display: none;
+     bottom:200px;
     
 }
+
 
 .card-movie:hover .card-content {
     width: 342px;

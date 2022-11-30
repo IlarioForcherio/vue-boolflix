@@ -1,7 +1,7 @@
 <template>
     <div>
         <h3>Films:</h3>
-        <div class="d-flex overflow-auto text-center">
+        <div class="card-container d-flex  text-center">
         <CardCompFilm class="card-comp" v-for='(elem, index) in arrayResultMain' :key="index"
          :objectResultFilmList="elem" />    
         </div>
@@ -26,6 +26,24 @@ import CardCompFilm from './CardCompFilm.vue'
 
 
 <style lang="scss" scoped>
+
+.card-container{
+    overflow-x:auto;
+    overflow-y:hidden;
+
+}
+
+.card-container::-webkit-scrollbar{
+   background-color:black;
+  
+}
+
+.card-container::-webkit-scrollbar-thumb {
+background-color:rgb(62, 59, 59);
+width:1px;
+border-radius: 10px;
+
+}
 
 
 
