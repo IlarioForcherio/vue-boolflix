@@ -35,15 +35,16 @@ import CardCompFilm from './CardCompFilm.vue'
 
 .card-container::-webkit-scrollbar{
    background-color:black;
+   width: 60px;
+   
   
 }
 
 .card-container::-webkit-scrollbar-thumb {
-background-color:rgb(62, 59, 59);
-width:1px;
-border-radius: 10px;
-
+ background-color:rgb(62, 59, 59);
+ border-radius: 10px;
 }
+
 
 
 

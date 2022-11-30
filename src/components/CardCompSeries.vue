@@ -7,8 +7,10 @@
             <div class="card-series-content">
                 <div>{{objectResultSeriesList.name}}</div>
                 <div>{{objectResultSeriesList.original_name}}</div>
-                <!-- <div>{{objectResultFilmList.original_language}}</div> -->
-                <country-flag :country='objectResultSeriesList.original_language' />
+                <div v-if="objectResultSeriesList.original_language ==  'it' " > 🇮🇹 </div>
+                <div v-else-if="objectResultSeriesList.original_language ==  'en'" > 🇺🇸 </div>
+                <div v-else > 🇹🇲 </div>
+                <!-- <country-flag :country='objectResultSeriesList.original_language' /> -->
                 <div>{{objectResultSeriesList.vote_average}}</div>
             </div>
         </div>

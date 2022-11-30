@@ -38,9 +38,16 @@
 
 .card-cnt-series::-webkit-scrollbar-thumb {
 background-color:rgb(62, 59, 59);
-
 border-radius: 10px;
+ 
 
+}
+.card-cnt-series::-webkit-scrollbar-scrollbar:hover{
+  background: #b30000; 
+}
+
+.card-cnt-series::-webkit-scrollbar-button {
+  height: 20px;
 }
 
 </style>
