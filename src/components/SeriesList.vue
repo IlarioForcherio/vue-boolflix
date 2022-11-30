@@ -27,7 +27,7 @@
 <style lang="scss" scoped>
 
 .card-cnt-series{
-     overflow-x:auto;
+    overflow-x:auto;
     overflow-y:hidden;
 }
 
@@ -38,7 +38,7 @@
 
 .card-cnt-series::-webkit-scrollbar-thumb {
 background-color:rgb(62, 59, 59);
-width:1px;
+
 border-radius: 10px;
 
 }

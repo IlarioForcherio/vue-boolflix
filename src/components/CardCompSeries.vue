@@ -8,7 +8,7 @@
                 <div>{{objectResultSeriesList.name}}</div>
                 <div>{{objectResultSeriesList.original_name}}</div>
                 <!-- <div>{{objectResultFilmList.original_language}}</div> -->
-                <country-flag :country='objectResultSeriesList.original_language' size=' big ' />
+                <country-flag :country='objectResultSeriesList.original_language' />
                 <div>{{objectResultSeriesList.vote_average}}</div>
             </div>
         </div>

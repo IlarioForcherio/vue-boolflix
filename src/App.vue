@@ -4,7 +4,7 @@
     <HeaderComp
      
      @emitsearchTextHeader="searchMovie" />
-    <MainComp 
+     <MainComp 
      :arraySeriesApp="arraySeries"
      :arrayResultApp="arrayResults"
      />
@@ -15,7 +15,7 @@
 
 import HeaderComp from './components/HeaderComp.vue'
 import MainComp from './components/MainComp.vue'
- import axios from 'axios'
+import axios from 'axios'
 
 export default {
   name: 'App',
@@ -47,7 +47,7 @@ export default {
   },
   mounted(){
   
-
+   
 
   },
   methods:{
