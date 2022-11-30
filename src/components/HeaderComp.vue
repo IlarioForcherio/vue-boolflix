@@ -1,15 +1,15 @@
 <template>
 
    <div class="header d-flex justify-content-between align-items-center">
-    <div class="d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-start">
        <img src="../assets/Netflix-Logo.png" alt=""> 
-       <ul>
-        <li><a href="#"></a>Home</li>
-        <li><a href="#"></a>Serie TV</li>
-        <li><a href="#"></a>Film</li>
-        <li><a href="#"></a>Nuovi e popolari</li>
-        <li><a href="#"></a>La mia lista</li>
-        <li><a href="#"></a>Sfoglia per lingua</li>
+       <ul class="mt-3 ps-0">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Serie TV</a></li>
+        <li><a href="#">Film</a></li>
+        <li><a href="#">Nuovi e popolari</a></li>
+        <li><a href="#">La mia lista</a></li>
+        <li><a href="#">Sfoglia per lingua</a></li>
         </ul> 
     </div>
    
@@ -66,14 +66,24 @@
 .header{
     color:white;
    img{
-    width:20%;
+    width:15%;
    } 
 }
 
-li{
+ul{
+
+ padding-inline-start: 0px;   
+  li{
     display:inline;
     padding:0 10px;
+    a{
+        text-decoration: none;
+        color: white;
+    }
+}  
 }
+
+
 
 
 
