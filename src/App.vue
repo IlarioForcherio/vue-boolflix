@@ -88,6 +88,11 @@ export default {
 </script>
 
 <style lang="scss">
+
+li{
+  list-style: none;
+}
+
 #app {
   background-color: black;
   font-family: Avenir, Helvetica, Arial, sans-serif;

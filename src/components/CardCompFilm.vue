@@ -9,10 +9,17 @@
                 <div v-if="objectResultFilmList.original_language ==  'it' " > 🇮🇹 </div>
                 <div v-else-if="objectResultFilmList.original_language ==  'en'" > 🇺🇸 </div>
                 <div v-else > 🇹🇲 </div>
-              
-                <div class="d-inline" v-for="n in fullStars" :key="n" >&#9733;</div>
-                <div class="d-inline" v-if="halfStar == true ">mezza</div>
-                <div class="d-inline" v-for="n in emptyStars" :key="n" >&#9734;</div>
+              <!-- cicli stars -->
+                <div class="d-inline" v-for="n in fullStars" :key="n" >
+                    &#9733;
+                </div>
+                
+                <div class="d-inline" v-if="halfStar == true ">
+                    <font-awesome-icon icon="fa-solid fa-star-half-stroke" />
+                </div>
+                <div class="d-inline" v-for="n in emptyStars" :key="n" >
+                    &#9734;
+                </div>
             </div>
         </div>
 </template>
@@ -37,8 +44,7 @@ export default {
      fullStars:0,
      halfStar: true,
      
-     
-
+    
     }
    },
    mounted(){
@@ -49,21 +55,18 @@ export default {
    methods: {
     starsRating(){
        
-       this.halfVote =  this.objectResultFilmList.vote_average / 2
+       this.halfVote = Math.floor(this.objectResultFilmList.vote_average / 2) 
        //this.fullStars = Math.floor(this.fullStars)
        console.log(this.halfVote)
        
+       this.fullStars = this.halfVote 
+       this.emptyStars = 5 - this.fullStars
        
        if(this.halfVote % 2 == 0){
         this.halfStar = false
        }else{
         this.halfStar = true
        }
-       
-       this.fullStars = this.halfVote 
-       this.emptyStars = 5 - this.fullStars
-     
-     
     }
   }
 
