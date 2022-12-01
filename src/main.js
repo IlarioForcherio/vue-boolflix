@@ -14,17 +14,16 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
-import { faUserSecret,faStarHalfStroke,faMagnifyingGlass,faStar } from '@fortawesome/free-solid-svg-icons'
-import {  } from '@fortawesome/free-regular-svg-icons'
+import { faStarHalfStroke,faMagnifyingGlass, faStar as faStarSolid, } from '@fortawesome/free-solid-svg-icons'
+import { faStar as faStarRegular, } from '@fortawesome/free-regular-svg-icons'
 
 /* add icons to the library */
-library.add(faUserSecret,faStarHalfStroke,faMagnifyingGlass,)
+library.add( faStarHalfStroke,faMagnifyingGlass, faStarRegular, faStarSolid )
 
 /* add font awesome icon component */
-Vue.component('font-awesome-icon', FontAwesomeIcon,faStar)
+Vue.component('font-awesome-icon', FontAwesomeIcon,)
 
-{/* <font-awesome-icon icon="fa-solid fa-star" />
-<font-awesome-icon icon="fa-regular fa-star" /> */}
+
 
 Vue.component('country-flag', CountryFlag)
 

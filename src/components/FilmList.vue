@@ -1,6 +1,27 @@
 <template>
     <div>
         <h3>Films:</h3>
+       
+            <select name="" id="">
+                <option value="">lorem</option>
+                <option value="">lorem</option>
+                <option value="">lorem</option>
+                <option value="">lorem</option>
+                <option value="">lorem</option>
+                <option value="">lorem</option>
+                <option value="">lorem</option>
+                <option value="">lorem</option>
+                <option value="">lorem</option>          
+                <option value="">lorem</option>
+                <option value="">lorem</option>
+                <option value="">lorem</option>
+                <option value="">lorem</option>
+                <option value="">lorem</option>
+                <option value="">lorem</option>
+                <option value="">lorem</option>
+                <option value="">lorem</option>
+            </select>
+        
         <div class="card-container d-flex  text-center">
         <CardCompFilm class="card-comp" v-for='(elem, index) in arrayResultMain' :key="index"
          :objectResultFilmList="elem" />    
@@ -27,6 +48,14 @@ import CardCompFilm from './CardCompFilm.vue'
 
 <style lang="scss" scoped>
 
+select {
+    display:table-row;
+}
+option {
+    background-color:blue;
+    display:inline-block;
+}
+
 .card-container{
     overflow-x:auto;
     overflow-y:hidden;
@@ -45,6 +74,8 @@ import CardCompFilm from './CardCompFilm.vue'
  background-color:rgb(62, 59, 59);
  border-radius: 10px;
 }
+
+
 
 
 

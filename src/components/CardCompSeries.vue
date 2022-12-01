@@ -7,19 +7,23 @@
             <div class="card-series-content">
                 <div>{{objectResultSeriesList.name}}</div>
                 <div>{{objectResultSeriesList.original_name}}</div>
-                <div v-if="objectResultSeriesList.original_language ==  'it' "> 🇮🇹 </div>
+                <!-- language -->
+                
+                <div>ciao</div>
+               
+               <!-- <div v-if="objectResultSeriesList.original_language ==  'it' "></div>
                 <div v-else-if="objectResultSeriesList.original_language ==  'en'"> 🇺🇸 </div>
-                <div v-else> 🇹🇲 </div>
+                <div v-else> 🇹🇲 </div> -->
                 <!-- cicli stars -->
                 <div class="d-inline" v-for="n in fullStars" :key="n">
-                    &#9733;
+                     <font-awesome-icon icon="fa-solid fa-star" />
                 </div>
     
                 <div class="d-inline" v-if="halfStar == true ">
                     <font-awesome-icon icon="fa-solid fa-star-half-stroke" />
                 </div>
                 <div class="d-inline" v-for="n in emptyStars" :key="n">
-                    &#9734;
+                 <font-awesome-icon icon="fa-regular fa-star" />
                 </div>
             </div>
         </div>
