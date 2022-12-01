@@ -9,22 +9,35 @@
                 <li><a href="#">Nuovi e popolari</a></li>
                 <li><a href="#">La mia lista</a></li>
                 <li><a href="#">Sfoglia per lingua</a></li>
-              
+    
             </ul>
         </div>
-        <div class="ms-3">
+        <!-- mafnifyng -->
+        <div class=" d-flex align-items-center">
             <!-- Default dropstart button -->
-            <div class="btn-group dropstart">
+            <div class="btn-group dropstart ">
                 <button type="button" class="btn btn-dark " data-bs-toggle="dropdown" aria-expanded="false">
-        <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
-      </button>
+            <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
+          </button>
                 <ul class="dropdown-menu bg-dark ">
                     <!-- Dropdown menu links -->
-                    <input class="netflix-input" placeholder="Titoli,Persone,generi" style="background-color: black;" v-model="searchTextHeader"
-                      @keyup.enter="$emit('emitsearchTextHeader', searchTextHeader  )" type="text">
+                    <input class="netflix-input" placeholder="Titoli,Persone,generi" style="background-color: black;" v-model="searchTextHeader" @keyup.enter="$emit('emitsearchTextHeader', searchTextHeader  )" type="text">
                 </ul>
             </div>
+            <!-- babyes -->
+            <span class="ps-3"><a href="">Bambini</a></span>
+            <!-- bell+logo -->
+            <div class="d-flex">
+                <div>
+                    <a href="">
+                        <font-awesome-icon class="bell ps-3" icon="fa-regular fa-bell" /> </a>
+                </div>
+                <div class="pill"></div>
+            </div>
+            <a  href=""><img class="profile-img" src="../assets/logo.jpeg" alt=""></a>
         </div>
+    
+    
     </div>
 </template>
 
@@ -44,6 +57,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+a {
+    text-decoration: none;
+    color: white;
+    &:hover {
+        color: rgb(137, 137, 137);
+    }
+}
+
 .header {
     color: white;
     img {
@@ -56,10 +77,6 @@ ul {
     li {
         display: inline;
         padding: 0 10px;
-        a {
-            text-decoration: none;
-            color: white;
-        }
     }
 }
 
@@ -88,5 +105,19 @@ textarea {
 .netflix-input::placeholder {
     color: white;
     background-color: black;
+}
+
+.bell {
+    position: absoluute;
+}
+
+.pill {
+    position: relative;
+    top: 4px;
+    right: 22px;
+    width: 7px;
+    height: 7px;
+    background-color: red;
+    border-radius: 50%;
 }
 </style>

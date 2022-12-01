@@ -53,6 +53,8 @@ export default {
     },
     mounted() {
       
+      //la funzione start rating puo' essere richiamata all'inizio del cotenitore della card
+      //questo per evitare il problema del caricamento errato delle stelle
        
     },
     methods: {

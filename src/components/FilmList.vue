@@ -1,17 +1,7 @@
 <template>
     <div>
         <h3>Films:</h3>
-       
             <select name="" id="">
-                <option value="">lorem</option>
-                <option value="">lorem</option>
-                <option value="">lorem</option>
-                <option value="">lorem</option>
-                <option value="">lorem</option>
-                <option value="">lorem</option>
-                <option value="">lorem</option>
-                <option value="">lorem</option>
-                <option value="">lorem</option>          
                 <option value="">lorem</option>
                 <option value="">lorem</option>
                 <option value="">lorem</option>

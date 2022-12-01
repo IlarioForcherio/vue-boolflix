@@ -15,10 +15,10 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
 import { faStarHalfStroke,faMagnifyingGlass, faStar as faStarSolid, } from '@fortawesome/free-solid-svg-icons'
-import { faStar as faStarRegular, } from '@fortawesome/free-regular-svg-icons'
+import { faStar as faStarRegular, faBell } from '@fortawesome/free-regular-svg-icons'
 
 /* add icons to the library */
-library.add( faStarHalfStroke,faMagnifyingGlass, faStarRegular, faStarSolid )
+library.add( faStarHalfStroke,faMagnifyingGlass, faStarRegular, faStarSolid, faBell)
 
 /* add font awesome icon component */
 Vue.component('font-awesome-icon', FontAwesomeIcon,)
