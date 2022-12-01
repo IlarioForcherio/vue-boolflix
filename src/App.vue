@@ -46,8 +46,6 @@ export default {
     }
   },
   mounted(){
-  
-   
 
   },
   methods:{
@@ -70,20 +68,9 @@ export default {
       axios.get(this.searchUrlSeries).then((respo) => {
 
         this.arraySeries = respo.data.results
-        
       })          
-
-
-
     }
-
-   
-
-
-
-
-  }
-  
+  } 
 }
 </script>
 

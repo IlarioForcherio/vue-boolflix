@@ -1,6 +1,7 @@
 <template>
     <div>
         <div class="card-series  mb-5">
+            {{ this.starsRating()  }}
             <div class='card-series-img'>
                 <img :src="`http://image.tmdb.org/t/p/w342/${objectResultSeriesList.backdrop_path}`" alt="">
             </div>
@@ -8,26 +9,23 @@
                 <div>{{objectResultSeriesList.name}}</div>
                 <div>{{objectResultSeriesList.original_name}}</div>
                 <!-- language -->
-                
-                <div>ciao</div>
-               
-               <!-- <div v-if="objectResultSeriesList.original_language ==  'it' "></div>
-                <div v-else-if="objectResultSeriesList.original_language ==  'en'"> 🇺🇸 </div>
-                <div v-else> 🇹🇲 </div> -->
-                <!-- cicli stars -->
+    
+                <img class="flag-series d-block ms-3" :src="`https://flagsapi.com/${
+                    (objectResultSeriesList.original_language == 'en') ? 'US' : (objectResultSeriesList.original_language == 'ja') ? 'JP' : 
+                    objectResultSeriesList.original_language.toUpperCase()}/shiny/64.png`">
+                <!-- stars -->
                 <div class="d-inline" v-for="n in fullStars" :key="n">
-                     <font-awesome-icon icon="fa-solid fa-star" />
+                    <font-awesome-icon icon="fa-solid fa-star" />
                 </div>
     
                 <div class="d-inline" v-if="halfStar == true ">
                     <font-awesome-icon icon="fa-solid fa-star-half-stroke" />
                 </div>
                 <div class="d-inline" v-for="n in emptyStars" :key="n">
-                 <font-awesome-icon icon="fa-regular fa-star" />
+                    <font-awesome-icon icon="fa-regular fa-star" />
                 </div>
             </div>
         </div>
-    
     </div>
 </template>
 
@@ -40,7 +38,7 @@ export default {
     components: {
 
     },
-    
+
     data() {
         return {
             halfVote: 0,
@@ -49,8 +47,13 @@ export default {
             halfStar: true,
         }
     },
+    created(){
+     
+     
+    },
     mounted() {
-        this.starsRating()
+      
+       
     },
     methods: {
         starsRating() {
@@ -75,6 +78,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+ .flag-series{
+    margin-left:160px;
+    width: 5%;
+    height:6%;
+}
+
 .card-series {
     padding-top: 30px;
     width: 342px;

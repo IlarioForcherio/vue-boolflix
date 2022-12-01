@@ -1,25 +1,32 @@
 <template>
         <div class="card-movie">
+             {{ this.starsRating()  }}
             <div class='card-img'>
                 <img :src="`http://image.tmdb.org/t/p/w342/${objectResultFilmList.backdrop_path}`" alt="">
             </div>
             <div class="card-content">
-                <!-- <div>{{objectResultFilmList.title}}</div> -->
+               
                 <div>{{objectResultFilmList.original_title}}</div>
-                <div v-if="objectResultFilmList.original_language ==  'it' " > 🇮🇹 </div>
-                <div v-else-if="objectResultFilmList.original_language ==  'en'" > 🇺🇸 </div>
-                <div v-else > 🇹🇲 </div>
-              <!-- cicli stars -->
+                <!-- flags -->
+                
+               <img class=" flag" :src="`https://flagsapi.com/${
+                (objectResultFilmList.original_language == 'en') ? 'US' : (objectResultFilmList.original_language == 'ja') ? 'JP' : 
+                objectResultFilmList.original_language.toUpperCase()}/shiny/64.png`">
+              <!-- stars  -->
+              <div>
                 <div class="d-inline" v-for="n in fullStars" :key="n" >
-                    &#9733;
+                   <font-awesome-icon icon="fa-solid fa-star" />
                 </div>
                 
                 <div class="d-inline" v-if="halfStar == true ">
                     <font-awesome-icon icon="fa-solid fa-star-half-stroke" />
                 </div>
                 <div class="d-inline" v-for="n in emptyStars" :key="n" >
-                    &#9734;
+                    <font-awesome-icon icon="fa-regular fa-star" />
                 </div>
+
+              </div>
+   
             </div>
         </div>
 </template>
@@ -48,8 +55,6 @@ export default {
     }
    },
    mounted(){
-    
-    this.starsRating()
 
    },
    methods: {
@@ -77,7 +82,10 @@ export default {
 
 <style lang="scss" scoped>
 
-
+ .flag{
+    width: 5%;
+    height:6%;
+}
 
 
 .card-movie {

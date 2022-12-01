@@ -9,6 +9,7 @@
                 <li><a href="#">Nuovi e popolari</a></li>
                 <li><a href="#">La mia lista</a></li>
                 <li><a href="#">Sfoglia per lingua</a></li>
+              
             </ul>
         </div>
         <div class="ms-3">
@@ -19,7 +20,8 @@
       </button>
                 <ul class="dropdown-menu bg-dark ">
                     <!-- Dropdown menu links -->
-                    <input class="netflix-input" placeholder="Titoli,Persone,generi" style="background-color: black;" v-model="searchTextHeader" @keyup.enter="$emit('emitsearchTextHeader', searchTextHeader  )" type="text">
+                    <input class="netflix-input" placeholder="Titoli,Persone,generi" style="background-color: black;" v-model="searchTextHeader"
+                      @keyup.enter="$emit('emitsearchTextHeader', searchTextHeader  )" type="text">
                 </ul>
             </div>
         </div>
