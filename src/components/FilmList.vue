@@ -1,14 +1,10 @@
 <template>
     <div>
-        <div id='movies' class="d-flex justify-content-center ">
+        <div id='movies'>
           <h3>Movies</h3>  
         </div>
-        
             <!-- <select name="" id="">
-                <option value="">lorem</option>
-
-            </select> -->
-        
+                <option value="">lorem</option></select> -->
         <div class="card-container d-flex  text-center">
         <CardCompFilm class="card-comp" v-for='(elem, index) in arrayResultMain' :key="index"
          :objectResultFilmList="elem" />    

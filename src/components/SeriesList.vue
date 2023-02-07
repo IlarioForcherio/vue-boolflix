@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="d-flex justify-content-center pt-5">
+        <div class=" pt-5">
            <h3 id="series">Series</h3>   
         </div>
       

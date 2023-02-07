@@ -7,7 +7,7 @@
         <HeaderComp @emitsearchTextHeader="searchMovie" />
         
         <!-- full-screen-video -->
-        <div class="container-fluid">
+        <div class="container-100">
             <div class="row ">
                 <div class="col">
                     <div class="video-cnt">

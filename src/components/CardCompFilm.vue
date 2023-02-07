@@ -12,6 +12,8 @@
                <img class=" flag" :src="`https://flagsapi.com/${
                 (objectResultFilmList.original_language == 'en') ? 'US' : (objectResultFilmList.original_language == 'ja') ? 'JP' : 
                 objectResultFilmList.original_language.toUpperCase()}/shiny/64.png`">
+
+                
               <!-- stars  -->
               <div>
                 <div class="d-inline" v-for="n in fullStars" :key="'fullStars' + n " >
@@ -111,7 +113,7 @@ export default {
 .card-content {
      width: 342px;
      display: none;
-     bottom:200px;
+    // bottom:200px;
      
     
     
