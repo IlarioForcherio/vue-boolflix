@@ -7,21 +7,21 @@
             </div>
             <div class="card-series-content">
                 <div>{{objectResultSeriesList.name}}</div>
-                <div>{{objectResultSeriesList.original_name}}</div>
+                
                 <!-- language -->
     
                 <img class="flag-series d-block ms-3" :src="`https://flagsapi.com/${
                     (objectResultSeriesList.original_language == 'en') ? 'US' : (objectResultSeriesList.original_language == 'ja') ? 'JP' : 
                     objectResultSeriesList.original_language.toUpperCase()}/shiny/64.png`">
                 <!-- stars -->
-                <div class="d-inline" v-for="n in fullStars" :key="n">
+                <div class="d-inline" v-for="n in fullStars" :key="fullStars +  n" >
                     <font-awesome-icon icon="fa-solid fa-star" />
                 </div>
     
                 <div class="d-inline" v-if="halfStar == true ">
                     <font-awesome-icon icon="fa-solid fa-star-half-stroke" />
                 </div>
-                <div class="d-inline" v-for="n in emptyStars" :key="n">
+                <div class="d-inline" v-for="n in emptyStars" :key="'emptyStars' + n">
                     <font-awesome-icon icon="fa-regular fa-star" />
                 </div>
             </div>
@@ -89,11 +89,14 @@ export default {
 
 .card-series {
     padding-top: 30px;
-    width: 342px;
+    width: 100%;
     transition: all 0.11s linear;
     height: 350px;
 }
 
+.card-series img{
+    border-radius: 10px;
+}
 .card-series:hover {
     scale: 1.1;
 }

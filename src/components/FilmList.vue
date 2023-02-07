@@ -1,16 +1,13 @@
 <template>
     <div>
-        <h3>Films:</h3>
-            <select name="" id="">
+        <div id='movies' class="d-flex justify-content-center ">
+          <h3>Movies</h3>  
+        </div>
+        
+            <!-- <select name="" id="">
                 <option value="">lorem</option>
-                <option value="">lorem</option>
-                <option value="">lorem</option>
-                <option value="">lorem</option>
-                <option value="">lorem</option>
-                <option value="">lorem</option>
-                <option value="">lorem</option>
-                <option value="">lorem</option>
-            </select>
+
+            </select> -->
         
         <div class="card-container d-flex  text-center">
         <CardCompFilm class="card-comp" v-for='(elem, index) in arrayResultMain' :key="index"

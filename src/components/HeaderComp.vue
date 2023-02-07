@@ -1,44 +1,42 @@
 <template>
-    <div class="header d-flex justify-content-between align-items-center">
-        <div class="d-flex align-items-center justify-content-start">
-            <img src="../assets/Netflix-Logo.png" alt="">
-            <ul class="mt-3 ps-0">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Serie TV</a></li>
-                <li><a href="#">Film</a></li>
-                <li><a href="#">Nuovi e popolari</a></li>
-                <li><a href="#">La mia lista</a></li>
-                <li><a href="#">Sfoglia per lingua</a></li>
-    
-            </ul>
-        </div>
-        <!-- mafnifyng -->
-        <div class=" d-flex align-items-center">
-            <!-- Default dropstart button -->
-            <div class="btn-group dropstart ">
-                <button type="button" class="btn btn-dark " data-bs-toggle="dropdown" aria-expanded="false">
-            <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
-          </button>
-                <ul class="dropdown-menu bg-dark ">
-                    <!-- Dropdown menu links -->
-                    <input class="netflix-input" placeholder="Titoli,Persone,generi" style="background-color: black;" v-model="searchTextHeader" @keyup.enter="$emit('emitsearchTextHeader', searchTextHeader  )" type="text">
-                </ul>
-            </div>
-            <!-- babyes -->
-            <span class="ps-3"><a href="">Bambini</a></span>
-            <!-- bell+logo -->
-            <div class="d-flex">
-                <div>
-                    <a href="">
-                        <font-awesome-icon class="bell ps-3" icon="fa-regular fa-bell" /> </a>
-                </div>
-                <div class="pill"></div>
-            </div>
-            <a  href=""><img class="profile-img" src="../assets/logo.jpeg" alt=""></a>
-        </div>
-    
-    
-    </div>
+
+     <div class="header d-flex justify-content-between align-items-center navbar navbar-expand-lg">
+                                    <div class="d-flex align-items-center justify-content-start">
+                                        <img src="../assets/Netflix-Logo.png" alt="">
+                                        <ul class="mt-3 ps-0 collapse navbar-collapse">
+                                            <li><a href="#">Home</a></li>
+                                            <li><a href="#series">Serie TV</a></li>
+                                            <li><a href="#movies">Film</a></li>
+                                            <li><a href="#">Nuovi e popolari</a></li>
+                                            <li><a href="#">La mia lista</a></li>
+                                            <li><a href="#">Sfoglia per lingua</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- mafnifyng -->
+                                    <div class=" d-flex align-items-center">
+                                        <!-- Default dropstart button -->
+                                        <div class="btn-group dropstart ">
+                                            <button type="button" class="btn btn-dark " data-bs-toggle="dropdown" aria-expanded="false">
+                                        <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
+                                      </button>
+                                            <ul class="dropdown-menu bg-dark ">
+                                                <!-- Dropdown menu links -->
+                                                <input class="netflix-input" placeholder="Titoli,Persone,generi" style="background-color: black;" v-model="searchTextHeader" @keyup.enter="$emit('emitsearchTextHeader', searchTextHeader  )" type="text">
+                                            </ul>
+                                        </div>
+                                        <!-- babyes -->
+                                        <span class="ps-3"><a href="">Bambini</a></span>
+                                        <!-- bell+logo -->
+                                        <div class="d-flex">
+                                            <div>
+                                                <a href="">
+                                                    <font-awesome-icon class="bell ps-3" icon="fa-regular fa-bell" /> </a>
+                                            </div>
+                                            <div class="pill"></div>
+                                        </div>
+                                        <a  href=""><img class="profile-img" src="../assets/logo.jpeg" alt=""></a>
+                                    </div>
+                                    </div>
 </template>
 
 <script>
@@ -66,6 +64,10 @@ a {
 }
 
 .header {
+    position: fixed;
+    //top: 0;
+    z-index: 1;
+    width: 100%;
     color: white;
     img {
         width: 15%;

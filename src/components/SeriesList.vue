@@ -1,6 +1,9 @@
 <template>
     <div>
-        <h3 class="mt-5">Tv-Series:</h3>
+        <div class="d-flex justify-content-center pt-5">
+           <h3 id="series">Series</h3>   
+        </div>
+      
         <div class="card-cnt-series d-flex  text-center ">
              <CardCompSeries class="" v-for='(element, index) in arraySeriesMain' :key="index"
              :objectResultSeriesList="element" /> 
@@ -25,6 +28,11 @@
 </script>
 
 <style lang="scss" scoped>
+
+// h3{
+//     font-family: Helvetica,Neue;
+//     font-weight: bold;
+// }
 
 .card-cnt-series{
     overflow-x:auto;

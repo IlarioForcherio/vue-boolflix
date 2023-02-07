@@ -14,14 +14,14 @@
                 objectResultFilmList.original_language.toUpperCase()}/shiny/64.png`">
               <!-- stars  -->
               <div>
-                <div class="d-inline" v-for="n in fullStars" :key="n" >
+                <div class="d-inline" v-for="n in fullStars" :key="'fullStars' + n " >
                    <font-awesome-icon icon="fa-solid fa-star" />
                 </div>
                 
                 <div class="d-inline" v-if="halfStar == true ">
                     <font-awesome-icon icon="fa-solid fa-star-half-stroke" />
                 </div>
-                <div class="d-inline" v-for="n in emptyStars" :key="n" >
+                <div class="d-inline" v-for="n in emptyStars" :key=" 'emptyStars' + n" >
                     <font-awesome-icon icon="fa-regular fa-star" />
                 </div>
 
@@ -94,12 +94,16 @@ export default {
     transition: all 0.2s linear;
     height:350px;
    
-    border-radius:10px;
+  
      
+}
+.card-movie img{
+      border-radius:20px;
+      padding: 10px;
 }
 
 .card-movie:hover{
-  scale: 1.3 ;
+  scale: 1.1 ;
 }
 
 
